@@ -1,0 +1,12 @@
+{
+    "prob1/test_validate_pull_request.sh": "be6f000bb24d53d1eb237291042507b8", 
+    "LICENSE": "ab1095a0278453c5154dd4c30720b5c5", 
+    "prob3/ci/Jenkinsfile": "81c8146c688979386c0bda5302b2ea45", 
+    "prob1/validate_pull_request.sh": "89acada9946162a00fd68bdda400946c", 
+    "prob2/string_validator.py": "a905f3b49007c572a45e0028c60f4afe", 
+    ".gitignore": "6482f9d8254f7f75af96c66a09031e65", 
+    "prob2/string_validator_test.py": "48e76ea3c8f1c99a7ec074dc51fd114f", 
+    "checksums.json": "d41d8cd98f00b204e9800998ecf8427e", 
+    "prob3/ci/scripts/cksum.py": "169747ce1045ca54a3a705ca59e98c5f", 
+    "README.md": "30e5dfcc211097c05d76154bccb2c90c"
+}
