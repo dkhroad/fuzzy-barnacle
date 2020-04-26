@@ -12,5 +12,18 @@ pipeline {
          ''')
       }
     }
+    stage('Commit') {
+      environment { 
+        BRANCH = "master"
+      }
+      steps {
+        sh('''
+          git checkout -B $BRANCH
+          git config user.name 'jenkins-ci'
+          git config user.email 'jenkins-ci-user@users.noreply.example.com'
+          git add . && git commit -am "[JENKINS_CI] add/update repo md4 checksum file"
+        ''')
+      }
+    }
   }
 }
