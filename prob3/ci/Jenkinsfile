@@ -1,13 +1,15 @@
 pipeline { 
   agent {
-    label 'agent1
+    label 'agent1'
   }
 
   stages {
-    stage('Build' {
+    stage('Build') {
       steps {
-        sh 'python ./prob3/scripts/cksum.py > checksums.json'
-        sh 'cat checksum.json'
+        sh('''
+          python ./prob3/ci/scripts/cksum.py > checksums.json
+          cat checksums.json
+         ''')
       }
     }
   }
