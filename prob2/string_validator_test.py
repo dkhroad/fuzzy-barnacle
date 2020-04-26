@@ -3,24 +3,36 @@ import unittest
 
 
 class TestValidBrackets(unittest.TestCase):
-    known_values = ( 
+    known_good_values = ( 
         ("()",True),
-        (" ",False),
         ("",True),
-        ("ab",False),
         ("((((()))))",True),
-        ("))((",False),
-        ("((((())",False),
         ("([{}()])",True),
         ("([{1}()])",True),
-        ("([{1}(b)])",False),
         ("(){}[]",True),
         ("(1234){4689}[9999]",True)
     )
 
+    known_bad_values = (
+        (" ",False),
+        ("ab",False),
+        (True,False),
+        (12345,False),
+        ("))((",False),
+        ("((((())",False),
+        ("([{1}(b)])",False),
+    )
+
     def test_with_known_values(self):
-        for input, expected_result in self.known_values:
-            result = string_validator.validate_brackets(input)
+        '''test with known good values'''
+        for input, expected_result in self.known_good_values:
+            result = string_validator.StringValidator().validate_brackets(input)
+            self.assertEqual(result,expected_result)
+
+    def test_with_bad_values(self):
+        '''test with known bad values'''
+        for input, expected_result in self.known_bad_values:
+            result = string_validator.StringValidator().validate_brackets(input)
             self.assertEqual(result,expected_result)
 
 if __name__ == '__main__':
