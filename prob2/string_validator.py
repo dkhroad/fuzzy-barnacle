@@ -48,6 +48,11 @@ class StringValidator(object):
    
 if __name__ == "__main__":
     import sys
+    
+    if (len(sys.argv) == 1):
+        print("Usage: {} \'string_to_validate\'".format(sys.argv[0]));
+        sys.exit(1)
+
     if len(sys.argv[1:]) > 0:
         res = StringValidator().validate_brackets(sys.argv[1])
         if res:
