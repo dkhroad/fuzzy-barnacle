@@ -4,8 +4,18 @@ import unittest
 
 class TestValidBrackets(unittest.TestCase):
     known_values = ( 
+        ("()",True),
         (" ",False),
-        ("ab",False)
+        ("",True),
+        ("ab",False),
+        ("((((()))))",True),
+        ("))((",False),
+        ("((((())",False),
+        ("([{}()])",True),
+        ("([{1}()])",True),
+        ("([{1}(b)])",False),
+        ("(){}[]",True),
+        ("(1234){4689}[9999]",True)
     )
 
     def test_with_known_values(self):
