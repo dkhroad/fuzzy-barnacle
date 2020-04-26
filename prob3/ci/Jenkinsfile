@@ -1,0 +1,14 @@
+pipeline { 
+  agent {
+    label 'agent1
+  }
+
+  stages {
+    stage('Build' {
+      steps {
+        sh 'python ./prob3/scripts/cksum.py > checksums.json'
+        sh 'cat checksum.json'
+      }
+    }
+  }
+}
