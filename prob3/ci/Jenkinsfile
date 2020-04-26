@@ -41,6 +41,7 @@ pipeline {
             git config --local --list
             git push origin HEAD:$BRANCH
           ''')
+        }
       }
     }
   }
