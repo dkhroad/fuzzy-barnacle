@@ -45,4 +45,14 @@ class StringValidator(object):
         # a correct order
         return len(stack) == 0 
     
-    
+   
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv[1:]) > 0:
+        res = StringValidator().validate_brackets(sys.argv[1])
+        if res:
+            print("input \"{}\" is a valid string".format(sys.argv[1]))
+        else:
+            print("input \"{}\" is NOT a valid string".format(sys.argv[1]))
+
+
