@@ -13,3 +13,8 @@ check_for_jira_issue() {
 }
 
 
+# the following check enables sourcing of this file from the test harness
+# see test_validate_pull_request.sh for more info 
+if ! [[ -z $1 ]]; then
+  check_for_jira_issue "$1"
+fi
