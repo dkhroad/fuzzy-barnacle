@@ -2,8 +2,7 @@
 CI workflow Examples
 
 
-## Prob 1: Logic to validate a pull request title has a JIRA number associated with it
-
+## Prob 1: Logic to validate every pull request title to have a JIRA number associated with it.
 
 
 The logic to check for a JIRA issues in the form of [JIRA-1234] is implemented in the shell script
